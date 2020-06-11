@@ -11,6 +11,17 @@ a {
     text-decoration: none;
 }
 
+.page-header {
+    display: inline;
+    position: absolute;
+    width: 1600px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+}
+
 .logo-top {
     font-family: Raleway;
     font-style: normal;
@@ -58,8 +69,8 @@ ul {
     color: #757575;
 }
 
-.auth-nav :hover,
-.auth-nav :focus {
+.auth-nav a:hover,
+.auth-nav a:focus {
     color: #2196F3
 }
 
@@ -186,8 +197,8 @@ h3 {
     color: #212121;
 }
 
-.page-filters :hover,
-.page-filters :focus {
+.page-filters a:hover,
+.page-filters a:focus {
     width: 128px;
     height: 38px;
     background: #2196F3;
