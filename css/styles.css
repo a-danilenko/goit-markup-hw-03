@@ -22,6 +22,10 @@ a {
     background: #FFFFFF;
 }
 
+.page-header {
+    display: flex
+}
+
 .logo-top {
     font-family: Raleway;
     font-style: normal;
