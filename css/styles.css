@@ -2,6 +2,11 @@
     --font-family: "Roboto", "Raleway", sans-serif
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #fff;
     color: #212121;
@@ -11,22 +16,36 @@ a {
     text-decoration: none;
 }
 
-.page-header {
-    display: inline;
+ul {
+    list-style-type: none;
+}
+
+.visually-hidden {
     position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+  }
+
+.page-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid transparent;
     width: 1600px;
     height: 80px;
     left: 0px;
-    top: 0px;
+    top: 0px;    
 
     background: #FFFFFF;
 }
 
-.page-header {
-    display: flex
-}
-
 .logo-top {
+    margin-left: 215px;
+
     font-family: Raleway;
     font-style: normal;
     font-weight: 700;
@@ -44,10 +63,6 @@ a {
     color: #212121;
 }
 
-ul {
-    list-style-type: none;
-}
-
 .site-nav a {
     font-family: Roboto;
     font-style: normal;
@@ -56,11 +71,28 @@ ul {
     line-height: 16px;
     letter-spacing: 0.02em;
     color: inherit;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-nav-list:first-child {
+    margin-left: 85px;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
+    border-bottom: 4px solid #2196F3;
+    border-radius: 2px;
     color: #2196F3
+}
+
+.site-nav-list {
+    display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
 }
 
 .auth-nav a {
@@ -78,13 +110,49 @@ ul {
     color: #2196F3
 }
 
+.auth-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+.auth-nav .item + .item {
+    margin-left: 30px;
+}
+
+.auth-nav-image {
+    margin-right: 10px;
+}
+
 /* 
 
 Тело сайта
 
 */
 
+main {
+    width: 1600px;
+    border-top: 1px solid #ECECEC;
+}
+
+.background-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* width: 1600px;
+    height: 600px;
+    left: 0px;
+    top: 80px; */
+    background: rgba(47, 48, 58, 0.8)
+}
+
 h1 {
+    width: 696px;
+    height: 120px;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
@@ -94,25 +162,12 @@ h1 {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: rgba(47, 48, 58, 0.8)
-}
-
-.order-button {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-
-    background-color: #2196F3;
-    color: #FFFFFF;
 }
 
 h2 {
+    /* margin-top: 94px; */
+    padding-top: 94px;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -122,6 +177,116 @@ h2 {
     letter-spacing: 0.03em;
 
     color: #212121;
+}
+
+h3 {
+    margin-top: 30px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    /* text-transform: uppercase; */
+
+    color: #212121;
+}
+
+h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.order-button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    margin-top: 30px;
+
+    background-color: #2196F3;
+    color: #FFFFFF;
+}
+
+.order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+
+    border-radius: 4px;
+}
+
+/* Features */
+
+.features {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
+
+.features-list {
+    display: flex;
+    justify-content: center;
+}
+
+.features-item + .features-item {
+    margin-left: 30px;
+}
+
+.features-image {
+    width: 270px;
+    height: 120px;
+    margin-top: 95px;
+
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+
+.features-list  img {
+    margin-left: 102px;
+    margin-right: 102px;
+    padding-top: 25px;
+}
+
+.features-list p {
+    width: 270px;
+    margin-top: 10px;
+}
+
+/* Чем мы занимаемся */
+
+.our-work-list {
+    display: flex;
+    justify-content: center;
+}
+
+.our-work-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.our-work-item + .our-work-item {
+    margin-left: 30px;
 }
 
 .work li {
@@ -138,12 +303,48 @@ h2 {
 
 .work span {
     width: 370px;
-    height: 70px;
+    height: 40px;
+    padding-top: 30px;
 
     background: rgba(47, 48, 58, 0.8);
 }
 
+/* Наша команда */
+
+.team {
+    margin-top: 94px;
+    background: #F5F4FA;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.team-card {
+    margin-top: 50px;
+    margin-bottom: 94px;
+    background-color: #fff;
+}
+
+.team-card + .team-card {
+    margin-left: 30px;
+}
+
+.team-card ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin-top: 30px;
+    padding-bottom: 38px;
+}
+
+
 .full-name {
+    margin-top: 30px;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -155,6 +356,8 @@ h2 {
 }
 
 .profession {
+    margin-top: 10px;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -167,6 +370,8 @@ h2 {
     color: #757575;
 }
 
+/* Постоянные клиенты */
+
 .clients li {
     width: 170px;
     height: 90px;
@@ -176,16 +381,40 @@ h2 {
     border-radius: 4px;
 }
 
-h3 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 36px;
-    letter-spacing: 0.06em;
+.clients ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 50px;
 }
 
+.clients li + li {
+    margin-left: 30px;
+}
+
+.clients img {
+    margin-left: 60px;
+    margin-top: 23px;
+}
+
+/* Портфолио > фильтры */
+
+.page-filters {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 94px;
+    margin-bottom: 50px;
+}
+
+
 .page-filters a {
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -201,6 +430,10 @@ h3 {
     color: #212121;
 }
 
+.page-filter-items + .page-filter-items {
+    margin-left: 8px;
+}
+
 .page-filters a:hover,
 .page-filters a:focus {
     width: 128px;
@@ -208,6 +441,53 @@ h3 {
     background: #2196F3;
     color: #FFFFFF;
 }
+
+
+/* Портфолио > проэкты */
+
+
+/* 
+Вариант №1 (ФЛЕКС) 
+*/
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1170px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.projects-container div {
+    width: 370px;
+    margin-bottom: 30px;
+
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+.projects-container h3 {
+    margin-top: 30px;
+    margin-bottom: 4px;
+    margin-left: 24px;
+}
+.projects-container p {
+    margin-left: 24px;
+}
+
+.projects-text:hover,
+.projects-text:focus {
+    background: rgba(33, 150, 243, 0.9);
+    color: #FFFFFF;
+}
+
+
+/* 
+Вариант №2 (ГРИД) 
+*/
+
+
+
+/* текст контейнера */
 
 .projects p {
     font-family: Roboto;
@@ -226,31 +506,32 @@ h3 {
 
 */
 
+footer {
+    width: 1600px;
+    height: 253px;
+    background: #2F303A;
+}
+
+.contacts-mailing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+    margin-top: 94px;
+    padding-top: 57px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
 .visually-hidden {
     height: 0;
     overflow: hidden;
 }
 
-.contacts-mailing {
-    width: 1600px;
-    height: 350px;
-
-    background: #2F303A;
-}
-
-h4 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    color: #FFFFFF;
-}
-
 .logo-bottom {
+    margin-top: 45px;
+
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -291,7 +572,18 @@ h4 {
     color: #2196F3;
 }
 
+.social-networks {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    color: #fff;
+}
+
 .signature {
+    margin: 0 auto;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -300,6 +592,7 @@ h4 {
     text-align: center;
     letter-spacing: 0.03em;
 
+    width: 1170px;
     color: rgba(255, 255, 255, 0.4);
-    background-color: #2F303A;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
