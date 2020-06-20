@@ -447,13 +447,14 @@ h4 {
 
 /* Портфолио > проэкты */
 
+
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-    width: 100%;
-    min-width: 1600px;
+
+    width: 1200px;
     margin: 0 auto;
 }
 
