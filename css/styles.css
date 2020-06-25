@@ -31,15 +31,17 @@ ul {
     clip: rect(0 0 0 0)
   }
 
-.page-header {
+.container {
     display: flex;
+    flex-direction: column;
     align-items: center;
 
-    width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+}
 
-    background: #FFFFFF;
+.page-header {
+    flex-direction: row;
 }
 
 .logo-top {
@@ -117,7 +119,6 @@ ul {
     display: flex;
     align-items: center;
     margin-left: auto;
-
 }
 
 .auth-nav .item + .item {
@@ -134,13 +135,9 @@ ul {
 
 */
 
-main {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-
-    border-top: 1px solid #ECECEC;
-}
+/* main {
+    
+} */
 
 .background-img {
     display: flex;
@@ -148,7 +145,12 @@ main {
     justify-content: center;
     align-items: center;
 
-    background: rgba(47, 48, 58, 0.8)
+    width: 1600px;
+    height: 600px;
+    left: 0px;
+    top: 80px;
+
+    background: rgba(47, 48, 58, 0.8);
 }
 
 h1 {
@@ -167,7 +169,7 @@ h1 {
 }
 
 h2 {
-    padding-top: 94px;
+    margin-top: 94px;
 
     font-family: Roboto;
     font-style: normal;
@@ -189,6 +191,7 @@ h3 {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
 
     color: #212121;
 }
@@ -312,10 +315,9 @@ h4 {
 /* Наша команда */
 
 .team {
-    margin: 0 auto;
+    width: 100%;
     margin-top: 94px;
     background: #F5F4FA;
-    max-width: 1600px;
 }
 
 .team-container {
@@ -389,6 +391,7 @@ h4 {
     justify-content: center;
 
     margin-top: 50px;
+    margin-bottom: 94px;
 }
 
 .clients li + li {
@@ -401,6 +404,10 @@ h4 {
 }
 
 /* Портфолио > фильтры */
+
+.projects {
+    border-top: 1px solid #ECECEC;
+}
 
 .page-filters {
     display: flex;
@@ -447,8 +454,6 @@ h4 {
 
 /* Портфолио > проэкты */
 
-
-
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -469,6 +474,7 @@ h4 {
     margin-top: 30px;
     margin-bottom: 4px;
     margin-left: 24px;
+    text-transform: none;
 }
 .projects-container p {
     margin-left: 24px;
@@ -500,22 +506,20 @@ h4 {
 
 */
 
-footer {
-    margin: 0 auto;
-    max-width: 1600px;
-    background: #2F303A;
-}
-
 .contacts-mailing {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: baseline;
 
     margin-top: 94px;
     padding-top: 57px;
     padding-bottom: 40px;
-    margin-bottom: 20px;
+
+    background: #2F303A;
+}
+
+.contacts-mailing-container {
+    margin-left: 215px;
 }
 
 .visually-hidden {
@@ -550,6 +554,10 @@ footer {
     color: #FFFFFF;
 }
 
+.contact-info {
+    margin-top: 20px;
+}
+
 .contact-info a:not(.adress) {
     font-family: Roboto;
     font-style: normal;
@@ -566,6 +574,10 @@ footer {
     color: #2196F3;
 }
 
+.social {
+    margin-left: 69px;
+}
+
 .social-networks {
     display: flex;
     justify-content: space-between;
@@ -573,4 +585,8 @@ footer {
     padding-top: 20px;
 
     color: #fff;
+}
+
+.mailing {
+    margin-left: 194px;
 }
